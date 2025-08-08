@@ -33,6 +33,7 @@ List<ServiceBookingDto> bookings = bookingRepo.getBookingsByProvider(provider.ge
         </style>
     </head>
     <body>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container-fluid">
@@ -117,7 +118,7 @@ List<ServiceBookingDto> bookings = bookingRepo.getBookingsByProvider(provider.ge
                             <a href="update-booking-status?id=<%= b.getId() %>&status=solved" class="btn btn-sm btn-warning">🛠 Mark Solved</a>
 
                             <% } else if ("solved".equals(b.getStatus())) { %>
-                            <a href="update-booking-status?id=<%= b.getId() %>&status=closed" class="btn btn-sm btn-dark">✅ Close</a>
+                            <span class="text-warning">⏳ Waiting for user confirmation</span>
 
                             <% } else { %>
                             <span class="text-muted">No actions</span>

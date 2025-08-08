@@ -69,19 +69,21 @@ public class ServiceRepositoryImpl implements ServiceRepository{
 
         if (rs.next()) {
             ServiceDto dto = new ServiceDto();
-            dto.setStatus(rs.getString("status")); // ← Add this line
+            dto.setStatus(rs.getString("status"));
             dto.setId(rs.getInt("id"));
             dto.setServiceName(rs.getString("service_name"));
             dto.setLocation(rs.getString("location"));
             dto.setContact(rs.getString("contact"));
             dto.setDescription(rs.getString("description"));
             dto.setPostedBy(rs.getString("posted_by"));
+            dto.setPostedById(rs.getInt("posted_by_id")); // ✅ FIXED: This line was missing
             conn.close();
             return dto;
         }
         conn.close();
         return null;
     }
+
 
 
     public boolean update(ServiceDto dto) throws Exception {

@@ -15,14 +15,6 @@ ServiceRepositoryImpl serviceRepo = new ServiceRepositoryImpl();
 UserRepositoryImpl userRepo = new UserRepositoryImpl();
 
 List<ServiceBookingDto> bookings = bookingRepo.getBookingsByUser(user.getId());
-
-    String bookingMsg = (String) session.getAttribute("bookingMessage");
-    if (bookingMsg != null) {
-    %>
-    <div class="alert alert-info"><%= bookingMsg %></div>
-    <%
-    session.removeAttribute("bookingMessage");
-    }
     %>
 
     <html>
@@ -44,6 +36,16 @@ List<ServiceBookingDto> bookings = bookingRepo.getBookingsByUser(user.getId());
 
     <a href="user-dashboard.jsp" class="btn btn-outline-secondary mb-3">← Back to Dashboard</a>
     <h2>📋 My Bookings</h2>
+
+    <%
+    String bookingMsg = (String) session.getAttribute("bookingMessage");
+    if (bookingMsg != null) {
+    %>
+    <div class="alert alert-info"><%= bookingMsg %></div>
+    <%
+    session.removeAttribute("bookingMessage");
+    }
+    %>
 
     <% if (bookings.isEmpty()) { %>
     <p class="text-muted">No bookings found.</p>
@@ -82,6 +84,7 @@ List<ServiceBookingDto> bookings = bookingRepo.getBookingsByUser(user.getId());
                     <button class="btn btn-sm btn-danger"
                             onclick="return confirm('Are you sure to cancel this booking?')">Cancel</button>
                 </form>
+
                 <% } else if ("accepted".equals(b.getStatus()) && !b.isCancelRequest()) { %>
                 <form action="cancel-booking" method="post">
                     <input type="hidden" name="id" value="<%= b.getId() %>" />
@@ -89,10 +92,27 @@ List<ServiceBookingDto> bookings = bookingRepo.getBookingsByUser(user.getId());
                     <button class="btn btn-sm btn-warning"
                             onclick="return confirm('Send cancellation request to provider?')">Request Cancel</button>
                 </form>
+
                 <% } else if (b.isCancelRequest()) { %>
                 <span class="text-warning">Cancel Requested</span>
+
+                <% } else if ("solved".equalsIgnoreCase(b.getStatus())) { %>
+                <form action="update-booking-status" method="get">
+                    <input type="hidden" name="id" value="<%= b.getId() %>" />
+                    <input type="hidden" name="status" value="closed" />
+                    <button class="btn btn-sm btn-success"
+                            onclick="return confirm('Has the provider completed the job? Confirm to close.')">
+                        ✅ Confirm & Close
+                    </button>
+                </form>
+
                 <% } else { %>
                 <span class="text-muted">No Action</span>
+                <% } %>
+
+                <% if ("closed".equalsIgnoreCase(b.getStatus())) { %>
+                <a href="submit-review.jsp?bookingId=<%= b.getId() %>&providerId=<%= provider.getId() %>"
+                   class="btn btn-sm btn-warning mt-2">Review</a>
                 <% } %>
             </td>
         </tr>

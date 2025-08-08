@@ -1,5 +1,6 @@
 package com.localconnect.servlet;
 
+import com.localconnect.dto.UserDto;
 import com.localconnect.repository.BookingRepositoryImpl;
 
 import javax.servlet.ServletException;
@@ -13,11 +14,19 @@ public class UpdateBookingStatusController extends HttpServlet {
         String status = req.getParameter("status");
         String idStr = req.getParameter("id");
 
-        HttpSession session = req.getSession();
+        HttpSession session = req.getSession(false);
+
+        if (session == null || session.getAttribute("user") == null) {
+            // No user in session, redirect to login
+            resp.sendRedirect("login.jsp");
+            return;
+        }
+
+        UserDto user = (UserDto) session.getAttribute("user");
 
         if (status == null || idStr == null) {
             session.setAttribute("msg", "❌ Invalid request.");
-            resp.sendRedirect("manage-bookings.jsp");
+            redirectToPanel(user, resp);
             return;
         }
 
@@ -37,7 +46,14 @@ public class UpdateBookingStatusController extends HttpServlet {
             session.setAttribute("msg", "❌ Error: " + e.getMessage());
         }
 
-        resp.sendRedirect("manage-bookings.jsp");
+        redirectToPanel(user, resp);
+    }
+
+    private void redirectToPanel(UserDto user, HttpServletResponse resp) throws IOException {
+        if ("provider".equals(user.getRole())) {
+            resp.sendRedirect("manage-bookings.jsp");
+        } else {
+            resp.sendRedirect("user-dashboard.jsp");
+        }
     }
 }
-
