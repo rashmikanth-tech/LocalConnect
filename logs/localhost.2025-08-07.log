@@ -1,0 +1,1268 @@
+07-Aug-2025 12:18:27.520 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [57] in the jsp file: [/provider-dashboard.jsp]
+The method getTitle() is undefined for the type ServiceDto
+54:                 <% if (services != null && !services.isEmpty()) {
+55:                 for (ServiceDto s : services) { %>
+56:                 <tr>
+57:                     <td><%= s.getTitle() %></td>
+58:                     <td><%= s.getDescription() %></td>
+59:                     <td>₹ <%= s.getPrice() %></td>
+60:                     <td>
+
+
+An error occurred at line: [59] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+56:                 <tr>
+57:                     <td><%= s.getTitle() %></td>
+58:                     <td><%= s.getDescription() %></td>
+59:                     <td>₹ <%= s.getPrice() %></td>
+60:                     <td>
+61:                         <button class="btn btn-sm btn-warning me-1" onclick="openEditModal('<%= s.getId() %>', '<%= s.getTitle() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">✏️ Edit</button>
+62:                         <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">🗑️ Delete</a>
+
+
+An error occurred at line: [61] in the jsp file: [/provider-dashboard.jsp]
+The method getTitle() is undefined for the type ServiceDto
+58:                     <td><%= s.getDescription() %></td>
+59:                     <td>₹ <%= s.getPrice() %></td>
+60:                     <td>
+61:                         <button class="btn btn-sm btn-warning me-1" onclick="openEditModal('<%= s.getId() %>', '<%= s.getTitle() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">✏️ Edit</button>
+62:                         <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">🗑️ Delete</a>
+63:                     </td>
+64:                 </tr>
+
+
+An error occurred at line: [61] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+58:                     <td><%= s.getDescription() %></td>
+59:                     <td>₹ <%= s.getPrice() %></td>
+60:                     <td>
+61:                         <button class="btn btn-sm btn-warning me-1" onclick="openEditModal('<%= s.getId() %>', '<%= s.getTitle() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">✏️ Edit</button>
+62:                         <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">🗑️ Delete</a>
+63:                     </td>
+64:                 </tr>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [57] in the jsp file: [/provider-dashboard.jsp]
+The method getTitle() is undefined for the type ServiceDto
+54:                 <% if (services != null && !services.isEmpty()) {
+55:                 for (ServiceDto s : services) { %>
+56:                 <tr>
+57:                     <td><%= s.getTitle() %></td>
+58:                     <td><%= s.getDescription() %></td>
+59:                     <td>₹ <%= s.getPrice() %></td>
+60:                     <td>
+
+
+An error occurred at line: [59] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+56:                 <tr>
+57:                     <td><%= s.getTitle() %></td>
+58:                     <td><%= s.getDescription() %></td>
+59:                     <td>₹ <%= s.getPrice() %></td>
+60:                     <td>
+61:                         <button class="btn btn-sm btn-warning me-1" onclick="openEditModal('<%= s.getId() %>', '<%= s.getTitle() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">✏️ Edit</button>
+62:                         <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">🗑️ Delete</a>
+
+
+An error occurred at line: [61] in the jsp file: [/provider-dashboard.jsp]
+The method getTitle() is undefined for the type ServiceDto
+58:                     <td><%= s.getDescription() %></td>
+59:                     <td>₹ <%= s.getPrice() %></td>
+60:                     <td>
+61:                         <button class="btn btn-sm btn-warning me-1" onclick="openEditModal('<%= s.getId() %>', '<%= s.getTitle() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">✏️ Edit</button>
+62:                         <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">🗑️ Delete</a>
+63:                     </td>
+64:                 </tr>
+
+
+An error occurred at line: [61] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+58:                     <td><%= s.getDescription() %></td>
+59:                     <td>₹ <%= s.getPrice() %></td>
+60:                     <td>
+61:                         <button class="btn btn-sm btn-warning me-1" onclick="openEditModal('<%= s.getId() %>', '<%= s.getTitle() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">✏️ Edit</button>
+62:                         <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">🗑️ Delete</a>
+63:                     </td>
+64:                 </tr>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:25:54.770 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Syntax error on token "package", Identifier expected
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [54] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+51:             </thead>
+52:             <tbody>
+53:             <% if (services != null && !services.isEmpty()) {
+54:             for (ServiceDto s : services) { %>
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Syntax error on token "package", Identifier expected
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [54] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+51:             </thead>
+52:             <tbody>
+53:             <% if (services != null && !services.isEmpty()) {
+54:             for (ServiceDto s : services) { %>
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:26:01.352 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Syntax error on token "package", Identifier expected
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [54] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+51:             </thead>
+52:             <tbody>
+53:             <% if (services != null && !services.isEmpty()) {
+54:             for (ServiceDto s : services) { %>
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Syntax error on token "package", Identifier expected
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [54] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+51:             </thead>
+52:             <tbody>
+53:             <% if (services != null && !services.isEmpty()) {
+54:             for (ServiceDto s : services) { %>
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:26:36.233 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Syntax error on token "package", Identifier expected
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [54] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+51:             </thead>
+52:             <tbody>
+53:             <% if (services != null && !services.isEmpty()) {
+54:             for (ServiceDto s : services) { %>
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Syntax error on token "package", Identifier expected
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [54] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+51:             </thead>
+52:             <tbody>
+53:             <% if (services != null && !services.isEmpty()) {
+54:             for (ServiceDto s : services) { %>
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:28:03.457 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Syntax error on token "package", Identifier expected
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [54] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+51:             </thead>
+52:             <tbody>
+53:             <% if (services != null && !services.isEmpty()) {
+54:             for (ServiceDto s : services) { %>
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Syntax error on token "package", Identifier expected
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [54] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+51:             </thead>
+52:             <tbody>
+53:             <% if (services != null && !services.isEmpty()) {
+54:             for (ServiceDto s : services) { %>
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:28:04.928 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.provider_002ddashboard_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.provider_002ddashboard_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:119)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:56)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:174)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:393)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:28:05.796 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.provider_002ddashboard_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.provider_002ddashboard_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:119)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:56)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:174)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:393)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:28:07.165 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.provider_002ddashboard_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.provider_002ddashboard_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:119)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:56)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:174)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:393)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:28:44.943 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Syntax error on token "package", Identifier expected
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [54] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+51:             </thead>
+52:             <tbody>
+53:             <% if (services != null && !services.isEmpty()) {
+54:             for (ServiceDto s : services) { %>
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Syntax error on token "package", Identifier expected
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [5] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+2: <%@ page import="java.util.List" %>
+3: <%@ page import="your.package.ServiceDto" %>
+4: <%
+5: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+6:     String providerName = (String) session.getAttribute("providerName");
+7:     %>
+8:     <html>
+
+
+An error occurred at line: [54] in the jsp file: [/provider-dashboard.jsp]
+ServiceDto cannot be resolved to a type
+51:             </thead>
+52:             <tbody>
+53:             <% if (services != null && !services.isEmpty()) {
+54:             for (ServiceDto s : services) { %>
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:31:29.090 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [58] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+58:                 <td>₹ <%= s.getPrice() %></td>
+59:                 <td>
+60:                     <button class="btn btn-sm btn-warning" onclick="openEditModal('<%= s.getId() %>', '<%= s.getServiceName() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">Edit</button>
+61:                     <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+
+
+An error occurred at line: [60] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+57:                 <td><%= s.getDescription() %></td>
+58:                 <td>₹ <%= s.getPrice() %></td>
+59:                 <td>
+60:                     <button class="btn btn-sm btn-warning" onclick="openEditModal('<%= s.getId() %>', '<%= s.getServiceName() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">Edit</button>
+61:                     <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+62:                 </td>
+63:             </tr>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [58] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+58:                 <td>₹ <%= s.getPrice() %></td>
+59:                 <td>
+60:                     <button class="btn btn-sm btn-warning" onclick="openEditModal('<%= s.getId() %>', '<%= s.getServiceName() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">Edit</button>
+61:                     <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+
+
+An error occurred at line: [60] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+57:                 <td><%= s.getDescription() %></td>
+58:                 <td>₹ <%= s.getPrice() %></td>
+59:                 <td>
+60:                     <button class="btn btn-sm btn-warning" onclick="openEditModal('<%= s.getId() %>', '<%= s.getServiceName() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">Edit</button>
+61:                     <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+62:                 </td>
+63:             </tr>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:39:40.498 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [58] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+58:                 <td>₹ <%= s.getPrice() %></td>
+59:                 <td>
+60:                     <button class="btn btn-sm btn-warning" onclick="openEditModal('<%= s.getId() %>', '<%= s.getServiceName() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">Edit</button>
+61:                     <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+
+
+An error occurred at line: [60] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+57:                 <td><%= s.getDescription() %></td>
+58:                 <td>₹ <%= s.getPrice() %></td>
+59:                 <td>
+60:                     <button class="btn btn-sm btn-warning" onclick="openEditModal('<%= s.getId() %>', '<%= s.getServiceName() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">Edit</button>
+61:                     <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+62:                 </td>
+63:             </tr>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [58] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+55:             <tr>
+56:                 <td><%= s.getServiceName() %></td>
+57:                 <td><%= s.getDescription() %></td>
+58:                 <td>₹ <%= s.getPrice() %></td>
+59:                 <td>
+60:                     <button class="btn btn-sm btn-warning" onclick="openEditModal('<%= s.getId() %>', '<%= s.getServiceName() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">Edit</button>
+61:                     <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+
+
+An error occurred at line: [60] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+57:                 <td><%= s.getDescription() %></td>
+58:                 <td>₹ <%= s.getPrice() %></td>
+59:                 <td>
+60:                     <button class="btn btn-sm btn-warning" onclick="openEditModal('<%= s.getId() %>', '<%= s.getServiceName() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">Edit</button>
+61:                     <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+62:                 </td>
+63:             </tr>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:43:10.710 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [63] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+60:                 <td><%= s.getDescription() %></td>
+61: 
+62:                 <td>
+63:                     <button class="btn btn-sm btn-warning" onclick="openEditModal('<%= s.getId() %>', '<%= s.getServiceName() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">Edit</button>
+64:                     <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+65:                 </td>
+66:             </tr>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [63] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+60:                 <td><%= s.getDescription() %></td>
+61: 
+62:                 <td>
+63:                     <button class="btn btn-sm btn-warning" onclick="openEditModal('<%= s.getId() %>', '<%= s.getServiceName() %>', '<%= s.getDescription() %>', '<%= s.getPrice() %>')">Edit</button>
+64:                     <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+65:                 </td>
+66:             </tr>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:48:53.623 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [45] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+42:                 <div class="card-body">
+43:                     <h5 class="card-title"><%= s.getServiceName() %></h5>
+44:                     <p class="card-text"><%= s.getDescription() %></p>
+45:                     <p><strong>Price:</strong> ₹<%= s.getPrice() %></p>
+46:                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editModal" onclick='populateModal(<%= s.getServiceId() %>, "<%= s.getServiceName() %>", "<%= s.getDescription() %>", <%= s.getPrice() %>)'>Edit</button>
+47:                     <a href="delete-service?id=<%= s.getServiceId() %>" class="btn btn-sm btn-danger">Delete</a>
+48:                 </div>
+
+
+An error occurred at line: [46] in the jsp file: [/provider-dashboard.jsp]
+The method getServiceId() is undefined for the type ServiceDto
+43:                     <h5 class="card-title"><%= s.getServiceName() %></h5>
+44:                     <p class="card-text"><%= s.getDescription() %></p>
+45:                     <p><strong>Price:</strong> ₹<%= s.getPrice() %></p>
+46:                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editModal" onclick='populateModal(<%= s.getServiceId() %>, "<%= s.getServiceName() %>", "<%= s.getDescription() %>", <%= s.getPrice() %>)'>Edit</button>
+47:                     <a href="delete-service?id=<%= s.getServiceId() %>" class="btn btn-sm btn-danger">Delete</a>
+48:                 </div>
+49:             </div>
+
+
+An error occurred at line: [46] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+43:                     <h5 class="card-title"><%= s.getServiceName() %></h5>
+44:                     <p class="card-text"><%= s.getDescription() %></p>
+45:                     <p><strong>Price:</strong> ₹<%= s.getPrice() %></p>
+46:                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editModal" onclick='populateModal(<%= s.getServiceId() %>, "<%= s.getServiceName() %>", "<%= s.getDescription() %>", <%= s.getPrice() %>)'>Edit</button>
+47:                     <a href="delete-service?id=<%= s.getServiceId() %>" class="btn btn-sm btn-danger">Delete</a>
+48:                 </div>
+49:             </div>
+
+
+An error occurred at line: [47] in the jsp file: [/provider-dashboard.jsp]
+The method getServiceId() is undefined for the type ServiceDto
+44:                     <p class="card-text"><%= s.getDescription() %></p>
+45:                     <p><strong>Price:</strong> ₹<%= s.getPrice() %></p>
+46:                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editModal" onclick='populateModal(<%= s.getServiceId() %>, "<%= s.getServiceName() %>", "<%= s.getDescription() %>", <%= s.getPrice() %>)'>Edit</button>
+47:                     <a href="delete-service?id=<%= s.getServiceId() %>" class="btn btn-sm btn-danger">Delete</a>
+48:                 </div>
+49:             </div>
+50:         </div>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [45] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+42:                 <div class="card-body">
+43:                     <h5 class="card-title"><%= s.getServiceName() %></h5>
+44:                     <p class="card-text"><%= s.getDescription() %></p>
+45:                     <p><strong>Price:</strong> ₹<%= s.getPrice() %></p>
+46:                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editModal" onclick='populateModal(<%= s.getServiceId() %>, "<%= s.getServiceName() %>", "<%= s.getDescription() %>", <%= s.getPrice() %>)'>Edit</button>
+47:                     <a href="delete-service?id=<%= s.getServiceId() %>" class="btn btn-sm btn-danger">Delete</a>
+48:                 </div>
+
+
+An error occurred at line: [46] in the jsp file: [/provider-dashboard.jsp]
+The method getServiceId() is undefined for the type ServiceDto
+43:                     <h5 class="card-title"><%= s.getServiceName() %></h5>
+44:                     <p class="card-text"><%= s.getDescription() %></p>
+45:                     <p><strong>Price:</strong> ₹<%= s.getPrice() %></p>
+46:                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editModal" onclick='populateModal(<%= s.getServiceId() %>, "<%= s.getServiceName() %>", "<%= s.getDescription() %>", <%= s.getPrice() %>)'>Edit</button>
+47:                     <a href="delete-service?id=<%= s.getServiceId() %>" class="btn btn-sm btn-danger">Delete</a>
+48:                 </div>
+49:             </div>
+
+
+An error occurred at line: [46] in the jsp file: [/provider-dashboard.jsp]
+The method getPrice() is undefined for the type ServiceDto
+43:                     <h5 class="card-title"><%= s.getServiceName() %></h5>
+44:                     <p class="card-text"><%= s.getDescription() %></p>
+45:                     <p><strong>Price:</strong> ₹<%= s.getPrice() %></p>
+46:                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editModal" onclick='populateModal(<%= s.getServiceId() %>, "<%= s.getServiceName() %>", "<%= s.getDescription() %>", <%= s.getPrice() %>)'>Edit</button>
+47:                     <a href="delete-service?id=<%= s.getServiceId() %>" class="btn btn-sm btn-danger">Delete</a>
+48:                 </div>
+49:             </div>
+
+
+An error occurred at line: [47] in the jsp file: [/provider-dashboard.jsp]
+The method getServiceId() is undefined for the type ServiceDto
+44:                     <p class="card-text"><%= s.getDescription() %></p>
+45:                     <p><strong>Price:</strong> ₹<%= s.getPrice() %></p>
+46:                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editModal" onclick='populateModal(<%= s.getServiceId() %>, "<%= s.getServiceName() %>", "<%= s.getDescription() %>", <%= s.getPrice() %>)'>Edit</button>
+47:                     <a href="delete-service?id=<%= s.getServiceId() %>" class="btn btn-sm btn-danger">Delete</a>
+48:                 </div>
+49:             </div>
+50:         </div>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+07-Aug-2025 12:55:54.144 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/connect] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Only a type can be imported. com.localconnect.dto.BookingDto resolves to a package
+
+An error occurred at line: [7] in the jsp file: [/provider-dashboard.jsp]
+BookingDto cannot be resolved to a type
+4: <%
+5: String providerName = (String) session.getAttribute("providerName");
+6: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+7:     List<BookingDto> bookings = (List<BookingDto>) request.getAttribute("bookings");
+8:         %>
+9:         <!DOCTYPE html>
+10:         <html lang="en">
+
+
+An error occurred at line: [7] in the jsp file: [/provider-dashboard.jsp]
+BookingDto cannot be resolved to a type
+4: <%
+5: String providerName = (String) session.getAttribute("providerName");
+6: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+7:     List<BookingDto> bookings = (List<BookingDto>) request.getAttribute("bookings");
+8:         %>
+9:         <!DOCTYPE html>
+10:         <html lang="en">
+
+
+An error occurred at line: [85] in the jsp file: [/provider-dashboard.jsp]
+The method getCategory() is undefined for the type ServiceDto
+82:                             <div class="card-body">
+83:                                 <h5 class="card-title"><%= s.getServiceName() %></h5>
+84:                                 <p class="card-text"><%= s.getDescription() %></p>
+85:                                 <p class="text-muted">Category: <%= s.getCategory() %></p>
+86:                                 <a href="edit-service.jsp?id=<%= s.getId() %>" class="btn btn-sm btn-outline-secondary">Edit</a>
+87:                                 <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+88:                             </div>
+
+
+An error occurred at line: [113] in the jsp file: [/provider-dashboard.jsp]
+BookingDto cannot be resolved to a type
+110:                     </tr>
+111:                     </thead>
+112:                     <tbody>
+113:                     <% for (BookingDto b : bookings) { %>
+114:                     <tr>
+115:                         <td><%= b.getUserName() %></td>
+116:                         <td><%= b.getServiceName() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [C:\LocalConnect\work\Catalina\localhost\connect\org\apache\jsp\provider_002ddashboard_jsp.java]
+Only a type can be imported. com.localconnect.dto.BookingDto resolves to a package
+
+An error occurred at line: [7] in the jsp file: [/provider-dashboard.jsp]
+BookingDto cannot be resolved to a type
+4: <%
+5: String providerName = (String) session.getAttribute("providerName");
+6: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+7:     List<BookingDto> bookings = (List<BookingDto>) request.getAttribute("bookings");
+8:         %>
+9:         <!DOCTYPE html>
+10:         <html lang="en">
+
+
+An error occurred at line: [7] in the jsp file: [/provider-dashboard.jsp]
+BookingDto cannot be resolved to a type
+4: <%
+5: String providerName = (String) session.getAttribute("providerName");
+6: List<ServiceDto> services = (List<ServiceDto>) request.getAttribute("services");
+7:     List<BookingDto> bookings = (List<BookingDto>) request.getAttribute("bookings");
+8:         %>
+9:         <!DOCTYPE html>
+10:         <html lang="en">
+
+
+An error occurred at line: [85] in the jsp file: [/provider-dashboard.jsp]
+The method getCategory() is undefined for the type ServiceDto
+82:                             <div class="card-body">
+83:                                 <h5 class="card-title"><%= s.getServiceName() %></h5>
+84:                                 <p class="card-text"><%= s.getDescription() %></p>
+85:                                 <p class="text-muted">Category: <%= s.getCategory() %></p>
+86:                                 <a href="edit-service.jsp?id=<%= s.getId() %>" class="btn btn-sm btn-outline-secondary">Edit</a>
+87:                                 <a href="delete-service?id=<%= s.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+88:                             </div>
+
+
+An error occurred at line: [113] in the jsp file: [/provider-dashboard.jsp]
+BookingDto cannot be resolved to a type
+110:                     </tr>
+111:                     </thead>
+112:                     <tbody>
+113:                     <% for (BookingDto b : bookings) { %>
+114:                     <tr>
+115:                         <td><%= b.getUserName() %></td>
+116:                         <td><%= b.getServiceName() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:565)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:344)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:330)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:591)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:379)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:656)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
