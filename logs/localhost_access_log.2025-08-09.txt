@@ -324,3 +324,8 @@
 0:0:0:0:0:0:0:1 - - [09/Aug/2025:16:50:57 +0530] "GET /connect/provider-dashboard.jsp HTTP/1.1" 200 6301
 0:0:0:0:0:0:0:1 - - [09/Aug/2025:16:50:59 +0530] "GET /connect/provider-dashboard.jsp HTTP/1.1" 200 6301
 0:0:0:0:0:0:0:1 - - [09/Aug/2025:16:53:15 +0530] "GET /connect/provider-dashboard.jsp HTTP/1.1" 200 6278
+0:0:0:0:0:0:0:1 - - [09/Aug/2025:17:18:47 +0530] "GET /connect HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [09/Aug/2025:17:18:49 +0530] "GET /connect/ HTTP/1.1" 200 4489
+0:0:0:0:0:0:0:1 - - [09/Aug/2025:17:18:51 +0530] "GET /connect/login.jsp HTTP/1.1" 200 2499
+0:0:0:0:0:0:0:1 - - [09/Aug/2025:17:18:55 +0530] "POST /connect/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [09/Aug/2025:17:18:55 +0530] "GET /connect/provider-dashboard.jsp HTTP/1.1" 200 6003
