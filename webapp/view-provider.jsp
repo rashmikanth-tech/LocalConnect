@@ -23,6 +23,17 @@ List<ReviewDto> reviews = reviewRepo.getReviewsByProvider(provider.getId());
     double avgRating = reviewRepo.getAverageRatingByProvider(provider.getId());
 
     SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy");
+
+    // Determine back URL based on logged-in role
+    UserDto loggedInUser = (UserDto) session.getAttribute("user");
+    String backUrl = "login.jsp"; // default
+    if (loggedInUser != null) {
+    if ("user".equals(loggedInUser.getRole())) {
+    backUrl = "search-services.jsp"; // or user dashboard
+    } else if ("provider".equals(loggedInUser.getRole())) {
+    backUrl = "provider-dashboard.jsp"; // provider dashboard
+    }
+    }
     %>
 
     <!DOCTYPE html>
@@ -47,7 +58,7 @@ List<ReviewDto> reviews = reviewRepo.getReviewsByProvider(provider.getId());
     <body>
 
     <div class="container">
-        <a href="search-services.jsp" class="btn btn-outline-secondary mt-4 mb-3">← Back to Services</a>
+        <a href="<%= backUrl %>" class="btn btn-outline-secondary mt-4 mb-3">← Back to Dashboard</a>
 
         <!-- Profile Section -->
         <div class="profile-card text-center">

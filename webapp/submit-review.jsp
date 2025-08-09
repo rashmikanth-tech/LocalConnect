@@ -14,6 +14,16 @@ String providerId = request.getParameter("providerId");
 <head>
     <title>Submit Review</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .star {
+            font-size: 2rem;
+            color: gray;
+            cursor: pointer;
+        }
+        .star.selected {
+            color: gold;
+        }
+    </style>
 </head>
 <body class="container mt-5">
 
@@ -21,12 +31,15 @@ String providerId = request.getParameter("providerId");
 <form action="submit-review" method="post">
     <input type="hidden" name="bookingId" value="<%= bookingId %>" />
     <input type="hidden" name="providerId" value="<%= providerId %>" />
+    <input type="hidden" name="rating" id="rating" value="0" required />
 
     <div class="mb-3">
-        <label class="form-label">Rating (1-5)</label>
-        <input type="number" name="rating" min="1" max="5" class="form-control" required
-               oninvalid="this.setCustomValidity('Please enter a rating between 1 and 5')"
-               oninput="this.setCustomValidity('')" />
+        <label class="form-label">Rating</label><br/>
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
     </div>
 
     <div class="mb-3">
@@ -37,6 +50,22 @@ String providerId = request.getParameter("providerId");
     <button class="btn btn-success">Submit Review</button>
     <a href="my-bookings.jsp" class="btn btn-secondary ms-2">Cancel</a>
 </form>
+
+<script>
+    const stars = document.querySelectorAll('.star');
+    const ratingInput = document.getElementById('rating');
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            const ratingValue = star.getAttribute('data-value');
+            ratingInput.value = ratingValue;
+
+            stars.forEach(s => {
+                s.classList.toggle('selected', s.getAttribute('data-value') <= ratingValue);
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
