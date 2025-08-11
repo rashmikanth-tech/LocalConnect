@@ -4,5 +4,7 @@
     <PreResources base="C:/LocalConnect/out/production/LocalConnect" className="org.apache.catalina.webresources.DirResourceSet" webAppMount="/WEB-INF/classes"/>
     <PostResources base="C:/SqlJar/mysql-connector-j-8.0.33.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/mysql-connector-j-8.0.33.jar"/>
     <PostResources base="C:/apache-tomcat-9.0.104/lib/servlet-api.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/servlet-api.jar"/>
+    <PostResources base="C:/Users/rashm/.m2/repository/com/google/code/gson/gson/2.11.0/gson-2.11.0.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/gson-2.11.0.jar"/>
+    <PostResources base="C:/Users/rashm/.m2/repository/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/error_prone_annotations-2.27.0.jar"/>
   </Resources>
 </Context>
