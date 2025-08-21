@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:11 +0530] "GET /connect HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:13 +0530] "GET /connect/ HTTP/1.1" 200 4489
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:15 +0530] "GET /connect/login.jsp HTTP/1.1" 200 2499
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:18 +0530] "POST /connect/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:18 +0530] "GET /connect/user-dashboard.jsp HTTP/1.1" 200 12705
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:27 +0530] "GET /connect/my-bookings.jsp HTTP/1.1" 200 2261
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:31 +0530] "GET /connect/submit-review.jsp?bookingId=5&providerId=1 HTTP/1.1" 200 1893
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:43 +0530] "POST /connect/submit-review HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:43 +0530] "GET /connect/my-bookings.jsp HTTP/1.1" 200 2330
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:45 +0530] "GET /connect/user-dashboard.jsp HTTP/1.1" 200 12705
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:47 +0530] "GET /connect/search-services.jsp?category=Electrician HTTP/1.1" 200 2308
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:50 +0530] "GET /connect/view-provider.jsp?id=1 HTTP/1.1" 200 2437
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:56 +0530] "GET /connect/search-services.jsp HTTP/1.1" 200 2308
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:28:58 +0530] "GET /connect/user-dashboard.jsp HTTP/1.1" 200 12705
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:35:53 +0530] "GET /connect/user-dashboard.jsp HTTP/1.1" 200 12705
+0:0:0:0:0:0:0:1 - - [12/Aug/2025:14:42:15 +0530] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 683
