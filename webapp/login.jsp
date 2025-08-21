@@ -49,7 +49,7 @@ String msg = (String) request.getAttribute("message");
     <h3 class="mb-4 text-center text-primary fw-bold">User Login</h3>
 
     <% if (msg != null) { %>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
         <%= msg %>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
@@ -69,6 +69,11 @@ String msg = (String) request.getAttribute("message");
         <div class="d-grid mb-3">
             <button type="submit" class="btn btn-custom btn-lg">Login</button>
         </div>
+
+        <div class="text-center mt-2">
+            <a href="forgot-password.jsp" class="text-danger fw-semibold text-decoration-none">Forgot Password?</a>
+        </div>
+
     </form>
 
     <div class="text-center mt-3">
@@ -76,6 +81,7 @@ String msg = (String) request.getAttribute("message");
             <a href="register.jsp" class="text-warning fw-semibold text-decoration-none">Register here</a>
         </p>
     </div>
+
 </div>
 
 <!-- Bootstrap JS -->

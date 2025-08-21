@@ -1,4 +1,4 @@
-package com.localconnect.controller;
+package com.localconnect.servlet;
 
 import com.localconnect.repository.BookingRepositoryImpl;
 import com.localconnect.dto.UserDto;

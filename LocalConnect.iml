@@ -10,5 +10,7 @@
     <orderEntry type="library" name="mysql-connector-j-8.0.33" level="project" />
     <orderEntry type="library" name="servlet-api" level="project" />
     <orderEntry type="library" name="google.code.gson" level="project" />
+    <orderEntry type="library" name="sun.mail.javax" level="project" />
+    <orderEntry type="library" name="sun.activation.jakarta" level="project" />
   </component>
 </module>

@@ -57,7 +57,7 @@ UserDto dto = (UserDto) request.getAttribute("dto");
         <div class="alert alert-info p-2 text-center"><%= msg %></div>
         <% } %>
 
-        <form action="register" method="post" novalidate>
+        <form action="register" method="post" onsubmit="return validatePassword()" novalidate>
             <div class="mb-3">
                 <label class="form-label">Full Name</label>
                 <input type="text" name="name" class="form-control" placeholder="Enter your name"
@@ -72,7 +72,16 @@ UserDto dto = (UserDto) request.getAttribute("dto");
 
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="******" required>
+                <input type="password" id="password" name="password" class="form-control" placeholder="******" required>
+            </div>
+
+            <!-- ✅ Confirm Password -->
+            <div class="mb-3">
+                <label class="form-label">Confirm Password</label>
+                <input type="password" id="confirmPassword" class="form-control" placeholder="******" required>
+                <div id="passwordError" class="text-danger small mt-1" style="display:none;">
+                    Passwords do not match.
+                </div>
             </div>
 
             <div class="mb-3">
@@ -96,5 +105,21 @@ UserDto dto = (UserDto) request.getAttribute("dto");
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function validatePassword() {
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirmPassword").value;
+        let error = document.getElementById("passwordError");
+
+        if (password !== confirmPassword) {
+            error.style.display = "block";
+            return false; // ❌ prevent form submission
+        } else {
+            error.style.display = "none";
+            return true; // ✅ allow submission
+        }
+    }
+</script>
 </body>
 </html>

@@ -126,4 +126,15 @@ public class UserRepositoryImpl implements UserRepository {
             return stmt.executeUpdate() > 0;
         }
     }
+
+    public boolean findByEmail(String email) throws Exception {
+        try (Connection conn = DBUtil.getConnection()) {
+            String sql = "SELECT id FROM users WHERE email=?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, email);
+            ResultSet rs = stmt.executeQuery();
+            return rs.next();
+        }
+    }
+
 }
